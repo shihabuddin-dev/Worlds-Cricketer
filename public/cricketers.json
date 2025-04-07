@@ -1,0 +1,148 @@
+[
+    {
+        "id": 1,
+        "name": "Babar Azam",
+        "country": "Pakistan",
+        "role": "Batsman",
+        "batting_style": "Right-Hand-Bat",
+        "price": "1300000",
+        "image_url": "https://i.ibb.co.com/RTWbC8cm/1-Babar-Azam.jpg",
+        "button_text": "Choose Player"
+    },
+    {
+        "id": 2,
+        "name": "David Warner",
+        "country": "Australia",
+        "role": "Batsman",
+        "batting_style": "Left-Hand-Bat",
+        "price": "1200000",
+        "image_url": "https://i.ibb.co.com/xq9cPsxp/2-David-Warner.jpg",
+         "button_text": "Choose Player"
+    },
+    {
+        "id": 3,
+        "name": "Kane Williamson",
+        "country": "New Zealand",
+        "role": "Batsman",
+        "batting_style": "Right-Hand-Bat",
+        "price": "1100000",
+        "image_url": "https://i.ibb.co.com/7JV3vBKS/3-Kane-Williamson.jpg","button_text": "Choose Player"
+    },
+    {
+        "id": 4,
+        "name": "Joe Root",
+        "country": "England",
+        "role": "Batsman",
+        "batting_style": "Right-Hand-Bat",
+        "price": "1000000",
+        "image_url": "https://i.ibb.co.com/QZg8KPt/4-Joe-Root.jpg","button_text": "Choose Player"
+    },
+    {
+        "id": 5,
+        "name": "Shaheen Afridi",
+        "country": "Pakistan",
+        "role": "Bowler",
+        "batting_style": "Left-Hand-Bat",
+        "price": "950000",
+        "image_url": "https://i.ibb.co.com/HTfxdXN6/5-Shaheen-Afridi.jpg","button_text": "Choose Player"
+    },
+    {
+        "id": 6,
+        "name": "Steve Smith",
+        "country": "Australia",
+        "role": "All-Rounder",
+        "batting_style": "Right-Hand-Bat",
+        "price": "1250000",
+        "image_url": "https://i.ibb.co.com/0pX9xXGg/6-Steve-Smith.jpg","button_text": "Choose Player"
+    },
+    {
+        "id": 7,
+        "name": "Ben Stokes",
+        "country": "England",
+        "role": "All-Rounder",
+        "batting_style": "Left-Hand-Bat",
+        "price": "1400000",
+        "image_url": "https://i.ibb.co.com/k2kW3yvc/7-Ben-Stokes.jpg",
+        "button_text": "Choose Player"
+    },
+    {
+        "id": 8,
+        "name": "Glenn Maxwell",
+        "country": "Australia",
+        "role": "All-Rounder",
+        "batting_style": "Right-Hand-Bat",
+        "price": "1150000",
+        "image_url": "https://i.ibb.co.com/1tsk9Gmb/8-Glenn-Maxwell.jpg",
+        "button_text": "Choose Player"
+    },
+    {
+        "id": 9,
+        "name": "Trent Boult",
+        "country": "New Zealand",
+        "role": "Bowler",
+        "batting_style": "Right-Hand-Bat",
+        "price": "980000",
+        "image_url": "https://i.ibb.co.com/QvBBFszH/9-Trent-Boult.jpg",
+        "button_text": "Choose Player"
+    },
+    {
+        "id": 10,
+        "name": "Moeen Ali",
+        "country": "England",
+        "role": "All-Rounder",
+        "batting_style": "Left-Hand-Bat",
+        "price": "920000",
+        "image_url": "https://i.ibb.co.com/vCh2N4Cb/10-Moeen-Ali.jpg",
+        "button_text": "Choose Player"
+    },
+    {
+        "id": 11,
+        "name": "Shakib Al Hasan",
+        "country": "Bangladesh",
+        "role": "All-Rounder",
+        "batting_style": "Left-Hand-Bat",
+        "price": "1000000",
+        "image_url": "https://i.ibb.co.com/tjThBBn/11-Shakib-Al-Hasan.jpg",
+        "button_text": "Choose Player"
+    },
+    {
+        "id": 12,
+        "name": "Rashid Khan",
+        "country": "Afghanistan",
+        "role": "Bowler",
+        "batting_style": "Right-Hand-Bat",
+        "price": "1050000",
+        "image_url": "https://i.ibb.co.com/23wx7T1P/12-Rashid-Khan.jpg",
+        "button_text": "Choose Player"
+    },
+    {
+        "id": 13,
+        "name": "Tamim Iqbal",
+        "country": "Bangladesh",
+        "role": "Batsman",
+        "batting_style": "Left-Hand-Bat",
+        "price": "870000",
+        "image_url": "https://i.ibb.co.com/Nd2y275G/13-Tamim-Iqbal.jpg",
+        "button_text": "Choose Player"
+    },
+    {
+        "id": 14,
+        "name": "Quinton de Kock",
+        "country": "South Africa",
+        "role": "Wicket-Keeper",
+        "batting_style": "Left-Hand-Bat",
+        "price": "950000",
+        "image_url": "https://i.ibb.co.com/MxxGf3Bs/14-Quinton-de-Kock.jpg",
+        "button_text": "Choose Player"
+    },
+    {
+        "id": 15,
+        "name": "Kagiso Rabada",
+        "country": "South Africa",
+        "role": "Bowler",
+        "batting_style": "Right-Hand-Bat",
+        "price": "1020000",
+        "image_url": "https://i.ibb.co.com/Df02m91v/15-Kagiso-Rabada.jpg",
+        "button_text": "Choose Player"
+    }
+]
