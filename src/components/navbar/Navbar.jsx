@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Navbar = () => {
+const Navbar = ({claimCoin}) => {
     return (
         <div className='container mx-auto flex items-center mt-4 px-2'>
             <div className='flex flex-1'>
@@ -12,7 +12,7 @@ const Navbar = () => {
                 <li>Teams</li>
                 <li>Schedules</li>
             </ul>
-            <button className='flex border-1 border-gray-400 ml-4 px-2 py-1 rounded-sm'>0 Coin <img src="images/coin.svg" alt="this is coin" /></button>
+            <button className='flex border-1 border-gray-400 ml-4 px-2 py-1 rounded-sm'>{claimCoin} Coin <img src="images/coin.svg" alt="this is coin" /></button>
         </div>
     );
 };

@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaUser, FaFlag } from "react-icons/fa";
 
 const Player = ({ player, handleSelectedPlayers }) => {
     const { image_url, name, country, role, batting_style, price
-    } = player
+    } = player;
+    const [selectedPlayer, setSelectedPlayer] = useState(false)
+    const handleSelectedPlayer = () => {
+        setSelectedPlayer(true)
+        handleSelectedPlayers()
+    }
     return (
         <div className='container mx-auto mt-4 px-2'>
             <div className='p-3 border-1 border-gray-300 rounded-lg space-y-2'>
@@ -21,12 +26,14 @@ const Player = ({ player, handleSelectedPlayers }) => {
                 <div className='flex justify-between'>
                     <p className='font-semibold'>Price: ${price}</p>
                     <button
-                        onClick={handleSelectedPlayers}
-                        className='border-1 border-gray-300 px-2 py-1 rounded-md hover:bg-[#E7FE29]'>Chose Player</button>
+                        disabled={selectedPlayer ? true : false}
+                        onClick={handleSelectedPlayer}
+                        className={`${selectedPlayer && 'bg-[#E7FE29]'} border-1 border-gray-300 px-2 py-1 rounded-md hover:bg-[#E7FE29]`}>{selectedPlayer ? 'Selected' : 'Chose Player'}
+                    </button>
                 </div>
 
             </div>
-        </div>
+        </div >
     );
 };
 
