@@ -1,7 +1,6 @@
-
 import Player from '../player/Player';
 
-const Players = ({ players, handleSelectedPlayers }) => {
+const Players = ({ players, handleSelectedPlayers,handleAddPlayer }) => {
  
 
     return (
@@ -12,7 +11,9 @@ const Players = ({ players, handleSelectedPlayers }) => {
                         <Player
                             handleSelectedPlayers={handleSelectedPlayers}
                             key={player.id}
-                            player={player}></Player>)
+                            player={player}
+                            handleAddPlayer={handleAddPlayer}
+                            ></Player>)
                 }
             </div>
         </div>

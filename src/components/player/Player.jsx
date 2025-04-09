@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import { FaUser, FaFlag } from "react-icons/fa";
 
-const Player = ({ player, handleSelectedPlayers }) => {
+const Player = ({ player, handleSelectedPlayers ,handleAddPlayer}) => {
     const { image_url, name, country, role, batting_style, price
     } = player;
     const [selectedPlayer, setSelectedPlayer] = useState(false)
     const handleSelectedPlayer = () => {
         setSelectedPlayer(true)
         handleSelectedPlayers()
+        handleAddPlayer(player)
     }
     return (
         <div className='container mx-auto mt-4 px-2'>
