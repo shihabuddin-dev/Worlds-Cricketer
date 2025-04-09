@@ -21,7 +21,7 @@ const Player = ({ player, handleSelectedPlayers, handleAddPlayer }) => {
                 <h2 className='flex gap-2 items-center text-lg font-semibold'><span><FaUser /></span> {name}</h2>
                 <div className='flex justify-between '>
                     <p className='flex gap-2 items-center text-gray-600 font-semibold'> <span><FaFlag /></span>{country}</p>
-                    <button className='bg-[#13131313] px-2 py-1 rounded-md hover:bg-[#E7FE29]'>{role}</button>
+                    <button className='bg-[#13131313] px-2 py-1 rounded-md hover:bg-gradient-to-r from-pink-300 to-yellow-300'>{role}</button>
                 </div>
                 <hr className='border-1 border-[#1313131A]' />
                 <div className='flex justify-between'>
@@ -33,7 +33,7 @@ const Player = ({ player, handleSelectedPlayers, handleAddPlayer }) => {
                     <button
                         disabled={selectedPlayer ? true : false}
                         onClick={handleSelectedPlayer}
-                        className={`${selectedPlayer && 'bg-[#E7FE29]'} border-1 border-gray-300 px-2 py-1 rounded-md hover:bg-[#E7FE29] cursor-pointer`}>{selectedPlayer ? 'Selected' : 'Chose Player'}
+                        className={`${selectedPlayer && 'bg-gradient-to-r from-pink-300 to-yellow-300'} border-1 border-gray-300 px-2 py-1 rounded-md hover:bg-gradient-to-r from-pink-300 to-yellow-300 cursor-pointer`}>{selectedPlayer ? 'Selected' : 'Chose Player'}
                     </button>
                 </div>
 

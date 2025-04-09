@@ -6,6 +6,7 @@ import Players from './components/players/Players'
 import AvailablePlayers from './components/availablePlayers/AvailablePlayers'
 import SelectedPlayers from './components/selectedPlayers/SelectedPlayers'
 import { ToastContainer, toast, Zoom } from 'react-toastify';
+import Footer from './components/footer/Footer'
 
 function App() {
   const [players, SetPlayers] = useState([])
@@ -86,7 +87,7 @@ function App() {
           )
         )
       }
-
+      <Footer></Footer>
       <ToastContainer transition={Zoom} position="top-center" />
     </>
   )
