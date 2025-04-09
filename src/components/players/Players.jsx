@@ -1,8 +1,8 @@
-import React, { use } from 'react';
+
 import Player from '../player/Player';
 
-const Players = ({ playersPromise, handleSelectedPlayers }) => {
-    const players = use(playersPromise)
+const Players = ({ players, handleSelectedPlayers }) => {
+ 
 
     return (
         <div className='container mx-auto mt-2 px-2'>

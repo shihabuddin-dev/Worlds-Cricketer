@@ -1,5 +1,5 @@
 
-import { Suspense, useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 import Header from './components/header/Header'
 import Navbar from './components/navbar/Navbar'
@@ -7,13 +7,23 @@ import Players from './components/players/Players'
 import AvailablePlayers from './components/availablePlayers/AvailablePlayers'
 import SelectedPlayers from './components/selectedPlayers/SelectedPlayers'
 
-const fetchPlayers = async () => {
-  const res = await fetch('cricketers.json')
-  return res.json()
-}
 
 function App() {
-  const playersPromise = fetchPlayers()
+  const [players, SetPlayers] = useState([])
+  const [loading, setLoading] = useState(false)
+  useEffect(() => {
+    setLoading(true)
+    const fetchPlayers = async () => {
+      const res = await fetch("cricketers.json")
+      const result = await res.json()
+      SetPlayers(result)
+    }
+    fetchPlayers()
+    setLoading(false)
+  }, [])
+
+
+  // const playersPromise = fetchPlayers()
   const [claimCoin, setClaimCoin] = useState(0)
   const [selected, setSelected] = useState(0)
   const [activeBtn, setActiveBtn] = useState(true)
@@ -34,12 +44,13 @@ function App() {
         setActiveBtn={setActiveBtn}
         selected={selected}></AvailablePlayers>
       {
-        activeBtn === true && (<Suspense fallback={<h2 className='text-center'>Cricketers data is Loading....</h2>}>
+        !loading && activeBtn === true && (
           <Players
             handleSelectedPlayers={handleSelectedPlayers}
-            playersPromise={playersPromise}></Players>
-        </Suspense>)
+            players={players}></Players>
+        )
       }
+
       {
         activeBtn === false && (<SelectedPlayers></SelectedPlayers>)
 
@@ -47,5 +58,4 @@ function App() {
     </>
   )
 }
-
 export default App
