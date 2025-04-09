@@ -12,7 +12,7 @@ const Navbar = ({claimCoin}) => {
                 <li>Teams</li>
                 <li>Schedules</li>
             </ul>
-            <button className='flex border-1 border-gray-400 ml-4 px-2 py-1 rounded-sm'>{claimCoin} Coin <img src="images/coin.svg" alt="this is coin" /></button>
+            <button className='flex border-1 border-[#1313131A] ml-4 px-2 py-1 rounded-sm'>{claimCoin} Coin <img src="images/coin.svg" alt="this is coin" /></button>
         </div>
     );
 };

@@ -9,10 +9,10 @@ const AvailablePlayers = ({ selected, activeBtn, setActiveBtn }) => {
                 <div>
                     <button
                         onClick={() => handleActiveBtn(true)}
-                        className={`${activeBtn ? 'bg-[#E7FE29]' : 'bg-transparent'} border-1 border-gray-400 px-3 md:px-5 py-2 md:py-3.5 font-bold rounded-md rounded-r-none hover:bg-[#E7FE29]`}>Available</button>
+                        className={`${activeBtn ? 'bg-[#E7FE29]' : 'bg-transparent'} border-1 border-[#1313131A] px-3 md:px-5 py-2 md:py-3.5 font-bold rounded-md rounded-r-none hover:bg-[#E7FE29]`}>Available</button>
                     <button
                         onClick={() => handleActiveBtn(false)}
-                        className={`${activeBtn ? 'bg-transparent' : 'bg-[#E7FE29]'} border-1 border-gray-400 px-3 md:px-5 py-2 md:py-3.5 font-bold rounded-md rounded-l-none hover:bg-[#E7FE29]`}>Selected {selected}</button>
+                        className={`${activeBtn ? 'bg-transparent' : 'bg-[#E7FE29]'} border-1 border-[#1313131A] px-3 md:px-5 py-2 md:py-3.5 font-bold rounded-md rounded-l-none hover:bg-[#E7FE29]`}>Selected {selected}</button>
                 </div>
             </div>
         </div>

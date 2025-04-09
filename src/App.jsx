@@ -5,6 +5,7 @@ import Navbar from './components/navbar/Navbar'
 import Players from './components/players/Players'
 import AvailablePlayers from './components/availablePlayers/AvailablePlayers'
 import SelectedPlayers from './components/selectedPlayers/SelectedPlayers'
+import { ToastContainer, toast,Zoom } from 'react-toastify';
 
 function App() {
   const [players, SetPlayers] = useState([])
@@ -13,6 +14,8 @@ function App() {
   const [selected, setSelected] = useState(0)
   const [activeBtn, setActiveBtn] = useState(true)
   const [addPlayer, setAddPlayer] = useState([])
+
+  // fetch data by use effect
   useEffect(() => {
     setLoading(true)
     const fetchPlayers = async () => {
@@ -24,9 +27,14 @@ function App() {
     setLoading(false)
   }, [])
 
+  // add player (display in select option)
   const handleAddPlayer = (player) => {
     const newPlayer = [...addPlayer, player]
     setAddPlayer(newPlayer)
+    toast.success("You Selected Player",{
+      autoClose: 1000,
+      theme:'colored'
+    });
   }
 
   // claim coin
@@ -55,13 +63,14 @@ function App() {
           ></Players>
         )
       }
-      
+
       {
         activeBtn === false && (
-          addPlayer.map(player=><SelectedPlayers key={player.id} player={player}></SelectedPlayers>)
+          addPlayer.map(player => <SelectedPlayers key={player.id} player={player}></SelectedPlayers>)
         )
 
       }
+        <ToastContainer transition={Zoom} position="top-center"/>
     </>
   )
 }
