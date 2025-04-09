@@ -5,7 +5,7 @@ import Navbar from './components/navbar/Navbar'
 import Players from './components/players/Players'
 import AvailablePlayers from './components/availablePlayers/AvailablePlayers'
 import SelectedPlayers from './components/selectedPlayers/SelectedPlayers'
-import { ToastContainer, toast,Zoom } from 'react-toastify';
+import { ToastContainer, toast, Zoom } from 'react-toastify';
 
 function App() {
   const [players, SetPlayers] = useState([])
@@ -31,10 +31,17 @@ function App() {
   const handleAddPlayer = (player) => {
     const newPlayer = [...addPlayer, player]
     setAddPlayer(newPlayer)
-    toast.success("You Selected Player",{
+    toast.success("You Selected Player", {
       autoClose: 1000,
-      theme:'colored'
+      theme: 'colored'
     });
+  }
+  // remove player (display in select option)
+  const handleRemovePlayer = (id) => {
+    const remainPlayers = addPlayer.filter(player => player.id !== id)
+    setAddPlayer(remainPlayers)
+    handleSelectedPlayersDec()
+    toast.warn("One Player Deleted", { autoClose: 1000, theme: 'colored' });
   }
 
   // claim coin
@@ -44,6 +51,11 @@ function App() {
   // selected players count
   const handleSelectedPlayers = () => {
     setSelected(selected + 1)
+
+  }
+  // selected players count
+  const handleSelectedPlayersDec = () => {
+    setSelected(selected - 1)
 
   }
   return (
@@ -66,11 +78,15 @@ function App() {
 
       {
         activeBtn === false && (
-          addPlayer.map(player => <SelectedPlayers key={player.id} player={player}></SelectedPlayers>)
+          addPlayer.map(player => <SelectedPlayers
+            key={player.id}
+            player={player}
+            handleRemovePlayer={handleRemovePlayer}
+          ></SelectedPlayers>)
         )
 
       }
-        <ToastContainer transition={Zoom} position="top-center"/>
+      <ToastContainer transition={Zoom} position="top-center" />
     </>
   )
 }
