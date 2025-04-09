@@ -9,6 +9,9 @@ const Player = ({ player, handleSelectedPlayers, handleAddPlayer }) => {
         setSelectedPlayer(true)
         handleSelectedPlayers()
         handleAddPlayer(player)
+        // {
+        //     claimCoin===0 && <h3>aa</h3>
+        // }
 
     }
     return (

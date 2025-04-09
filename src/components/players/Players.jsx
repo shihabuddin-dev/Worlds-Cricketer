@@ -2,7 +2,7 @@ import Player from '../player/Player';
 
 const Players = ({ players, handleSelectedPlayers,handleAddPlayer }) => {
  
-
+ 
     return (
         <div className='container mx-auto mt-2 px-2'>
             <div className='grid sm:grid-cols-2 md:grid-cols-3'>

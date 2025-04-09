@@ -75,17 +75,18 @@ function App() {
           ></Players>
         )
       }
-
       {
         activeBtn === false && (
-          addPlayer.map(player => <SelectedPlayers
-            key={player.id}
-            player={player}
-            handleRemovePlayer={handleRemovePlayer}
-          ></SelectedPlayers>)
+          addPlayer.map(player =>
+            <SelectedPlayers
+              key={player.id}
+              player={player}
+              handleRemovePlayer={handleRemovePlayer}
+            ></SelectedPlayers>
+          )
         )
-
       }
+
       <ToastContainer transition={Zoom} position="top-center" />
     </>
   )
